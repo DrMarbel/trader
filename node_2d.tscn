@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh6pogrphthek"]
+
+[ext_resource type="Texture2D" uid="uid://c1ke86mr8f0c8" path="res://assets/Ships/Dinghy/dinghy_a.png" id="1_devce"]
+[ext_resource type="Script" path="res://assets/Scripts/pmove.gd" id="2_qg2h5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mlv6c"]
+size = Vector2(33, 33)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_qg2h5")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(204.522, 257.532)
+texture = ExtResource("1_devce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(204.5, 257.5)
+shape = SubResource("RectangleShape2D_mlv6c")
